@@ -1,0 +1,430 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | MediCare</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fbff;
+    color:#222;
+}
+
+/* Header */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.7rem;
+    font-weight:700;
+    color:#0d6efd;
+}
+
+.logo i{
+    margin-right:8px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#0d6efd;
+}
+
+/* Hero */
+.hero{
+    padding:150px 10% 80px;
+    text-align:center;
+    background:linear-gradient(135deg,#0d6efd,#4dabf7);
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+/* Services */
+.services{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    border-radius:20px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+}
+
+.service-card i{
+    font-size:3rem;
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.service-card h3{
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.btn{
+    background:#0d6efd;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#084298;
+}
+
+/* Features */
+.features{
+    padding:80px 10%;
+    background:#eef5ff;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.feature i{
+    color:#0d6efd;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+/* Modal */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.modal-content{
+    background:white;
+    max-width:500px;
+    width:100%;
+    border-radius:20px;
+    padding:30px;
+    position:relative;
+    animation:popup .3s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+.modal-content h2{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.modal-content p{
+    color:#666;
+    line-height:1.8;
+}
+
+/* Footer */
+footer{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .section-title{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-heart-pulse"></i>
+            MediCare
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#doctors">Doctors</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Healthcare Services</h1>
+    <p>
+        We provide world-class medical services with advanced
+        technology and experienced healthcare professionals.
+    </p>
+</section>
+
+<section class="services">
+    <h2 class="section-title">Our Medical Services</h2>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+            <i class="fa-solid fa-heart-circle-plus"></i>
+            <h3>Cardiology</h3>
+            <p>Advanced diagnosis and treatment for heart-related conditions.</p>
+            <button class="btn" onclick="showService('Cardiology')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Neurology</h3>
+            <p>Comprehensive care for brain, spine, and nervous system disorders.</p>
+            <button class="btn" onclick="showService('Neurology')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-child"></i>
+            <h3>Pediatrics</h3>
+            <p>Dedicated healthcare services for infants, children, and teens.</p>
+            <button class="btn" onclick="showService('Pediatrics')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-bone"></i>
+            <h3>Orthopedics</h3>
+            <p>Specialized treatment for bones, joints, and muscles.</p>
+            <button class="btn" onclick="showService('Orthopedics')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h3>General Medicine</h3>
+            <p>Routine checkups, preventive care, and chronic disease management.</p>
+            <button class="btn" onclick="showService('General Medicine')">
+                Learn More
+            </button>
+        </div>
+
+        <div class="service-card">
+            <i class="fa-solid fa-hand-sparkles"></i>
+            <h3>Dermatology</h3>
+            <p>Skin, hair, and nail treatments with modern care solutions.</p>
+            <button class="btn" onclick="showService('Dermatology')">
+                Learn More
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<section class="features">
+    <h2 class="section-title">Why Choose Us?</h2>
+
+    <div class="feature-grid">
+        <div class="feature">
+            <i class="fa-solid fa-user-doctor"></i>
+            <h3>Expert Doctors</h3>
+            <p>Highly qualified specialists across multiple fields.</p>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-hospital"></i>
+            <h3>Modern Facilities</h3>
+            <p>State-of-the-art medical equipment and infrastructure.</p>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-clock"></i>
+            <h3>24/7 Support</h3>
+            <p>Emergency healthcare services available around the clock.</p>
+        </div>
+
+        <div class="feature">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Trusted Care</h3>
+            <p>Patient-centered treatment with safety and comfort.</p>
+        </div>
+    </div>
+</section>
+
+<div class="modal" id="serviceModal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="serviceTitle"></h2>
+        <p id="serviceDescription"></p>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 MediCare. All Rights Reserved.</p>
+</footer>
+
+<script>
+const services = {
+    Cardiology:
+        "Our cardiology department provides heart screenings, ECG tests, preventive care, and advanced treatment plans for cardiovascular diseases.",
+
+    Neurology:
+        "We diagnose and treat disorders affecting the brain, spinal cord, nerves, and muscles using modern medical techniques.",
+
+    Pediatrics:
+        "Comprehensive healthcare services for infants, children, and adolescents with a focus on growth and development.",
+
+    Orthopedics:
+        "Expert care for fractures, sports injuries, joint replacements, and musculoskeletal disorders.",
+
+    "General Medicine":
+        "Routine health checkups, disease prevention, diagnosis, and long-term chronic disease management.",
+
+    Dermatology:
+        "Professional treatment for skin, hair, and nail conditions including cosmetic and medical dermatology."
+};
+
+function showService(service){
+    document.getElementById("serviceTitle").innerText = service;
+    document.getElementById("serviceDescription").innerText = services[service];
+    document.getElementById("serviceModal").style.display = "flex";
+}
+
+function closeModal(){
+    document.getElementById("serviceModal").style.display = "none";
+}
+
+window.onclick = function(e){
+    const modal = document.getElementById("serviceModal");
+    if(e.target === modal){
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+```
