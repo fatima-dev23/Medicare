@@ -1,52 +1,35 @@
-# 🏥 MediCare - Modern Healthcare Website
+# 🏥 MediCare.pk - DevOps Assignment
 
-MediCare is a modern and responsive healthcare landing page built using HTML, CSS, and JavaScript. The website is designed to provide a professional online presence for healthcare providers, clinics, hospitals, or medical service organizations.
-
-## ✨ Features
-
-- Modern and clean user interface
-- Fully responsive design
-- Professional healthcare-themed layout
-- Smooth navigation experience
-- Service showcase section
-- Doctor profiles section
-- Appointment booking form
-- Mobile-friendly navigation menu
-- Interactive hover effects
-- Optimized for desktop, tablet, and mobile devices
+A simple responsive healthcare website developed using **HTML, CSS, and JavaScript** as part of a **DevOps Assignment**. This project demonstrates Git version control, GitHub collaboration, GitHub Actions CI/CD pipelines, and branch management.
 
 ---
 
-## 📸 Sections Included
+## 📌 Project Overview
 
-### Home
-A welcoming hero section featuring a healthcare-focused message and call-to-action button.
-
-### Services
-Highlights key healthcare services such as:
-
-- Expert Doctors
-- Emergency Care
-- Health Checkups
-
-### Specialists
-Displays healthcare professionals with their specialties.
-
-### Appointment Form
-Allows visitors to submit appointment requests through an easy-to-use contact form.
-
-### Footer
-Simple and professional footer section.
+MediCare.pk is a frontend healthcare website containing a landing page with essential healthcare information. The repository is also configured with automated **Continuous Integration (CI)** and **Continuous Deployment (CD)** workflows using **GitHub Actions**.
 
 ---
 
-## 🛠️ Technologies Used
+## ✨ Website Features
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla JS)
-- Font Awesome Icons
-- Google Fonts
+* Responsive navigation bar
+* Hero section
+* Healthcare services section
+* Doctors page
+* Services page
+* Professional footer
+* Responsive design for desktop and mobile devices
+
+---
+
+## 🛠 Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript (Vanilla JS)
+* Git
+* GitHub
+* GitHub Actions
 
 ---
 
@@ -55,90 +38,167 @@ Simple and professional footer section.
 ```text
 medicare-website/
 │
-├── index.html
+├── .github/
+│   └── workflows/
+│       ├── ci.yml
+│       └── deploy.yml
 │
 ├── css/
 │   └── style.css
 │
 ├── js/
-│   └── script.js
+│   └── main.js
 │
-├── images/
-│
-└── README.md
+├── index.html
+├── doctors.html
+├── services.html
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Git Workflow
 
-### Clone the Repository
+### Main Branches
+
+* **main** – Production-ready code
+* **develop** – Development branch
+* **staging** – Testing branch
+
+### Feature Branches
+
+* `feature/doctors-page`
+* `feature/services-page`
+
+Feature branches are merged into the **develop** branch through Pull Requests before being merged into **main**.
+
+---
+
+## 🔀 Git Commands Used
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+git status
+git diff
+git add .
+git commit -m "style: updated color scheme"
+git log --oneline
+```
+
+---
+
+## ⚙️ Continuous Integration (CI)
+
+The repository includes a GitHub Actions CI workflow that automatically runs on every push and pull request.
+
+### CI Checks
+
+* ✅ Verifies `index.html` exists
+* ✅ Validates HTML structure
+* ✅ Checks required project files
+* ✅ Prevents committing sensitive `.env` files
+
+Workflow File:
+
+```text
+.github/workflows/ci.yml
+```
+
+---
+
+## 🚀 Continuous Deployment (CD)
+
+A deployment workflow automatically runs after successful verification on the **main** branch.
+
+The deployment pipeline:
+
+* Performs CI verification
+* Generates deployment report
+* Displays deployment status
+* Confirms successful deployment
+
+Workflow File:
+
+```text
+.github/workflows/deploy.yml
+```
+
+---
+
+## 🧪 Pipeline Testing
+
+The CI pipeline was tested by intentionally introducing an error.
+
+### Failure Test
+
+* Removed `<!DOCTYPE html>` from `index.html`
+* GitHub Actions failed as expected
+
+### Fix Test
+
+* Restored `<!DOCTYPE html>`
+* Pipeline executed successfully
+
+---
+
+## 📂 Branch Strategy
+
+```text
+main
+│
+├── develop
+│     ├── feature/doctors-page
+│     └── feature/services-page
+│
+└── staging
+```
+
+---
+
+## ▶️ Running the Project
+
+1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/medicare-website.git
 ```
 
-### Open the Project
+2. Open the project folder.
 
-Navigate to the project folder and open:
+3. Open `index.html` in your browser.
 
-```text
-index.html
-```
-
-You can also use a local development server such as Live Server in Visual Studio Code for a better development experience.
+Or use the **Live Server** extension in Visual Studio Code.
 
 ---
 
-## 🎨 Design Highlights
+## 📸 Assignment Deliverables
 
-- Healthcare-inspired color scheme
-- Modern card-based layout
-- Glassmorphism navigation effect
-- Responsive grid system
-- Smooth scrolling navigation
-- Professional typography
-- Consistent spacing and alignment
+This repository includes:
 
----
+* Repository setup
+* Git commit history
+* Branch management
+* Pull Requests
+* GitHub Actions CI Pipeline
+* GitHub Actions CD Pipeline
+* Doctors page
+* Services page
 
-## 📱 Responsive Design
-
-The website is optimized for:
-
-- Desktop Computers
-- Laptops
-- Tablets
-- Mobile Phones
-
----
-
-## 🔮 Future Enhancements
-
-Potential improvements that can be added:
-
-- Dark Mode
-- Online Appointment Scheduling
-- Patient Testimonials
-- Blog Section
-- Doctor Search Functionality
-- Health Tips Section
-- Contact Map Integration
-- Authentication System
-- Backend Integration
+Screenshots required by the assignment should be included in the project submission.
 
 ---
 
 ## 📄 License
 
-This project is available under the MIT License.
+This project was created for educational purposes as part of a DevOps laboratory assignment.
 
 ---
 
-## 👨‍⚕️ About MediCare
+## 👨‍💻 Author
 
-MediCare is a sample healthcare website created for learning and demonstration purposes. It showcases modern web design principles and responsive frontend development techniques that can be adapted for clinics, hospitals, healthcare startups, and medical professionals.
+Fatima
 
----
-
-⭐ Feel free to customize and expand this project according to your requirements.
+DevOps Assignment – MediCare.pk Website
