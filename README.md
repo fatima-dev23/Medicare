@@ -1,4 +1,4 @@
-# 🏥 MediCare.pk - DevOps Assignment
+# 🏥 MediCare - DevOps Project
 
 A simple responsive healthcare website developed using **HTML, CSS, and JavaScript** as part of a **DevOps Assignment**. This project demonstrates Git version control, GitHub collaboration, GitHub Actions CI/CD pipelines, and branch management.
 
